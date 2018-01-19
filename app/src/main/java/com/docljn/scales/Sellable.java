@@ -6,4 +6,10 @@ package com.docljn.scales;
 
 interface Sellable {
 
+    double getSellingPrice();
+    double getPurchasePrice();
+
+//    I want to add a default method here to calculate the markup, but that requires Java8
+//    our AndroidStudio setup doesn't allow that.  BOTHER.
+
 }
