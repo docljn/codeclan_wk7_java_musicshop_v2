@@ -1,35 +1,19 @@
 package com.docljn.scales.Instruments;
 
-import com.docljn.scales.Sellable;
+
+import com.docljn.scales.StockItem;
 
 /**
  * Created by lornanoble on 19/01/2018.
  */
 
-public class Instrument implements Sellable {
-    String name;
+public class Instrument extends StockItem {
     Enum<Section> section;
-    double purchasePrice;
-    double sellingPrice;
 
-    public Instrument(String name, Section section, double purchasePrice, double sellingPrice){
-        this.name = name;
+
+
+    public Instrument(String name, double purchasePrice, double sellingPrice, Section section) {
+        super(name, purchasePrice, sellingPrice);
         this.section = section;
-        this.purchasePrice = purchasePrice;
-        this.sellingPrice = sellingPrice;
-    }
-
-    @Override
-    public double getSellingPrice() {
-        return this.sellingPrice;
-    }
-
-    @Override
-    public double getPurchasePrice() {
-        return this.purchasePrice;
-    }
-
-    public String getName() {
-        return this.name;
     }
 }

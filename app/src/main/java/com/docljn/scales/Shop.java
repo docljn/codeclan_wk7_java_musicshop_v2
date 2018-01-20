@@ -9,7 +9,7 @@ import java.util.ArrayList;
 class Shop {
 
     private String shopName;
-    private ArrayList<Sellable> stock;
+    private ArrayList<StockItem> stock;
     private double cashCount;
 
     public Shop(String shopName) {
@@ -32,12 +32,12 @@ class Shop {
 
 
 
-    public void buy(Sellable stockItem) {
+    public void buy(StockItem stockItem) {
 //        TODO: add a source for the money used to buy stock that isn't the cash count!
         this.stock.add(stockItem);
     }
 
-    public void sell(Sellable stockItem) {
+    public void sell(StockItem stockItem) {
 
         if(inStock(stockItem)) {
 
@@ -46,12 +46,12 @@ class Shop {
         }
     }
 
-    private boolean inStock(Sellable stockItem) {
+    private boolean inStock(StockItem stockItem) {
         return this.stock.contains(stockItem);
     }
 
 
-    public double getMarkup(Sellable stockItem) {
+    public double getMarkup(StockItem stockItem) {
         return stockItem.getSellingPrice() - stockItem.getPurchasePrice();
     }
 }

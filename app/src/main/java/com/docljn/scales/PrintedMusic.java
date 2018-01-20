@@ -1,34 +1,27 @@
 package com.docljn.scales;
 
+import com.docljn.scales.Instruments.Instrument;
+import com.docljn.scales.Instruments.Section;
+
 /**
  * Created by lornanoble on 19/01/2018.
  */
 
-class PrintedMusic implements Sellable {
+class PrintedMusic extends StockItem {
 
-    private final String name;
-    private double sellingPrice;
-    private double purchasePrice;
+    public  Section section;
+    public  Instrument instrument;
 
-    public PrintedMusic(String name, double purchasePrice, double sellingPrice) {
-        this.name = name;
-        this.purchasePrice = purchasePrice;
-        this.sellingPrice = sellingPrice;
+    public PrintedMusic(String name, double purchasePrice, double sellingPrice) {// Section section, Instrument instrument) {
+        super(name, purchasePrice, sellingPrice);
+        //this.section = section;
+        //this.instrument = instrument;
     }
 
-    public String getName() {
-        return this.name;
-    }
 
-    @Override
-    public double getSellingPrice() {
-        return this.sellingPrice;
-    }
 
-    @Override
-    public double getPurchasePrice() {
-        return this.purchasePrice;
-    }
+
+
 
 
 

@@ -1,5 +1,6 @@
 package com.docljn.scales;
 
+import com.docljn.scales.Instruments.Horn;
 import com.docljn.scales.Instruments.Instrument;
 import com.docljn.scales.Instruments.Section;
 
@@ -18,7 +19,7 @@ public class InstrumentTest {
 
     @Before
     public void before(){
-        horn = new Instrument("French Horn", Section.BRASS, 70.00, 140.00);
+        horn = new Horn("French Horn", 70.00, 140.00, Section.BRASS);
     }
 
 

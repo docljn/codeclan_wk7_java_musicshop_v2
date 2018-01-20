@@ -13,7 +13,6 @@ public class ShopTest {
 
 
     Shop shop;
-    private Sellable item;
     private PrintedMusic musicBook;
 
 
@@ -35,7 +34,7 @@ public class ShopTest {
 
     @Test
     public void canAddStock(){
-        shop.buy(item);
+        shop.buy(musicBook);
         assertEquals(1, shop.getStockCount());
     }
 
