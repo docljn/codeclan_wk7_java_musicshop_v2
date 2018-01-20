@@ -7,13 +7,22 @@ package com.docljn.scales.Instruments;
 
 public class Horn extends Instrument {
 
-    public Horn(String name, double purchasePrice, double sellingPrice, Section section, String description) {
+    private final int valveNumber;
+
+    public Horn(String name, double purchasePrice, double sellingPrice, Section section, String description, int valveNumber) {
         super(name, purchasePrice, sellingPrice, section, description);
+        this.valveNumber = valveNumber;
     }
+
+
 
 
     @Override
     public String play() {
         return "Hoot hoot";
+    }
+
+    public int getValveNumber() {
+        return this.valveNumber;
     }
 }

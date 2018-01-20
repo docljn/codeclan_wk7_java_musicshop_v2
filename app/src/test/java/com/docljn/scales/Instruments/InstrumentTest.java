@@ -1,4 +1,4 @@
-package com.docljn.scales;
+package com.docljn.scales.Instruments;
 
 import com.docljn.scales.Instruments.Horn;
 import com.docljn.scales.Instruments.Instrument;
@@ -19,7 +19,7 @@ public class InstrumentTest {
 
     @Before
     public void before(){
-        horn = new Horn("French Horn", 70.00, 140.00, Section.BRASS, "Silver");
+        horn = new Horn("French Horn", 70.00, 140.00, Section.BRASS, "Silver", 3);
     }
 
 
@@ -50,9 +50,6 @@ public class InstrumentTest {
         assertEquals("Matte bronze", horn.getDescription());
     }
 
-    @Test
-    public void canBePlayed(){
-        assertEquals("Hoot hoot", horn.play());
-    }
+
 
 }
