@@ -44,7 +44,7 @@ public abstract class StockItem {
     }
 
 
-    public double calculateMarkup() {
+    public double getMarkup() {
         return getSellingPrice() - getPurchasePrice();
     }
 }

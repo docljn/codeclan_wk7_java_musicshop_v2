@@ -55,7 +55,7 @@ public class PrintedMusicTest {
 
     @Test
     public void calculatesMarkup(){
-        assertEquals(7.99, musicBook.calculateMarkup(), 0.001);
+        assertEquals(7.99, musicBook.getMarkup(), 0.001);
     }
 
 }

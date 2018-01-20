@@ -37,7 +37,5 @@ public class InstrumentTest {
     public void canGetPurchasePrice(){
         assertEquals(70, horn.getPurchasePrice(), 0.001);
     }
-
-
-
+    
 }
