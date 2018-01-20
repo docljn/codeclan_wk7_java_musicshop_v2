@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
  * Created by lornanoble on 20/01/2018.
  */
 
-public class SparesTest {
+public class StringTest {
 
     ViolaString string;
 

@@ -1,15 +1,25 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Strings.Pitch;
+import com.docljn.scales.Spares.Strings.ViolaString;
+
+import java.util.ArrayList;
+
 /**
  * Created by lornanoble on 20/01/2018.
  */
 
 class Viola extends Instrument {
-    private final String stringTuning;
 
-    public Viola(String name, double purchasePrice, double sellingPrice, Section section, String description, String stringTuning) {
+    private final ArrayList<ViolaString> strings;
+
+    public Viola(String name, double purchasePrice, double sellingPrice, Section section, String description) {
         super(name, purchasePrice, sellingPrice, section, description);
-        this.stringTuning = stringTuning;
+        this.strings = new ArrayList<ViolaString>();
+        strings.add(new ViolaString(name, 0, 0, Pitch.C));
+        strings.add(new ViolaString(name, 0, 0, Pitch.G));
+        strings.add(new ViolaString(name, 0, 0, Pitch.D));
+        strings.add(new ViolaString(name, 0, 0, Pitch.A));
     }
 
     @Override
@@ -17,7 +27,7 @@ class Viola extends Instrument {
         return "Mellow bowed strings";
     }
 
-    public String getStringTuning() {
-        return stringTuning;
+    public ArrayList<ViolaString> getStrings() {
+        return this.strings;
     }
 }

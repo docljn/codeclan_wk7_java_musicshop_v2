@@ -1,5 +1,8 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Strings.Pitch;
+import com.docljn.scales.Spares.Strings.ViolaString;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +18,7 @@ public class ViolaTest {
 
     @Before
     public void before(){
-        viola = new Viola("Viola", 200, 450, Section.STRINGS, "Rosewood", "C, G, D, A");
+        viola = new Viola("Yamaha", 200, 450, Section.STRINGS, "Rosewood");
     }
 
 
@@ -26,7 +29,7 @@ public class ViolaTest {
 
     @Test
     public void hasStringTuning(){
-        assertEquals("C, G, D, A", viola.getStringTuning());
+        assertEquals(Pitch.C, viola.getStrings().get(0).getPitch());
     }
 
 }
