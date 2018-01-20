@@ -1,5 +1,8 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Reeds.ReedNumber;
+import com.docljn.scales.Spares.Reeds.ReedType;
+
 /**
  * Created by lornanoble on 20/01/2018.
  */

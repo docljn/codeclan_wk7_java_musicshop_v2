@@ -1,10 +1,10 @@
-package com.docljn.scales.Instruments;
+package com.docljn.scales.Spares.Reeds;
 
 /**
  * Created by lornanoble on 20/01/2018.
  */
 
-enum ReedNumber {
+public enum ReedNumber {
     ONE(1),
     ONE_POINT_FIVE(1.5),
     TWO(2),
@@ -24,4 +24,7 @@ enum ReedNumber {
     public double getStrength(){
         return this.strength;
     }
+
+    //    TODO: refactor to have classes of instrument reeds, with type and number
+
 }

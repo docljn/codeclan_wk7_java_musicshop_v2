@@ -7,7 +7,7 @@ import com.docljn.scales.Instruments.Section;
  * Created by lornanoble on 19/01/2018.
  */
 
-class PrintedMusic extends StockItem {
+public class PrintedMusic extends StockItem {
 
     public  Section section;
     public  Instrument instrument;

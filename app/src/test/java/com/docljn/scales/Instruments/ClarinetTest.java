@@ -1,5 +1,8 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Reeds.ReedNumber;
+import com.docljn.scales.Spares.Reeds.ReedType;
+
 import org.junit.Before;
 import org.junit.Test;
 
