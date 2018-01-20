@@ -38,5 +38,12 @@ public class ClarinetTest {
         assertEquals("Duck-like quacking at 90.0dB" ,clarinet.play());
     }
 
+    @Test
+    public void canChangeReed(){
+        ClarinetReed reed2 = new ClarinetReed("Boosey", 3.00, 5.00, ReedType.E_FLAT, ReedNumber.FIVE);
+        clarinet.setReed(reed2);
+        assertEquals(ReedNumber.FIVE, clarinet.getReedNumber());
+    }
+
 
 }

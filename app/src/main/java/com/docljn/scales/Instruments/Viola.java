@@ -1,6 +1,6 @@
 package com.docljn.scales.Instruments;
 
-import com.docljn.scales.Spares.Strings.Pitch;
+import com.docljn.scales.Spares.Pitch;
 import com.docljn.scales.Spares.Strings.ViolaString;
 
 import java.util.ArrayList;

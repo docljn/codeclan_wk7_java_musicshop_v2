@@ -1,5 +1,7 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Pitch;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,17 +17,17 @@ public class TimpaniTest {
 
     @Before
     public void before(){
-        timpano = new Timpani("Kettle Drum", 3000, 5000, Section.PERCUSSION, "Brass with calfskin drumhead", "C");
+        timpano = new Timpani("Kettle Drum", 3000, 5000, Section.PERCUSSION, "Brass with calfskin drumhead", Pitch.G);
     }
 
     @Test
     public void canGetPitch() {
-        assertEquals("C", timpano.getPitch());
+        assertEquals(Pitch.C, timpano.getPitch());
     }
 
     @Test
     public void canSetPitch(){
-        timpano.setPitch("G");
-        assertEquals("G", timpano.getPitch());
+        timpano.setPitch(Pitch.G);
+        assertEquals(Pitch.G, timpano.getPitch());
     }
 }

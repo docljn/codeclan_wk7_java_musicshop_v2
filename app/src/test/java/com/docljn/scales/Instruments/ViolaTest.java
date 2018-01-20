@@ -1,7 +1,6 @@
 package com.docljn.scales.Instruments;
 
-import com.docljn.scales.Spares.Strings.Pitch;
-import com.docljn.scales.Spares.Strings.ViolaString;
+import com.docljn.scales.Spares.Pitch;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,13 +1,15 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Pitch;
+
 /**
  * Created by lornanoble on 20/01/2018.
  */
 
 class Timpani extends Instrument {
-    private String pitch;
+    private Pitch pitch;
 
-    public Timpani(String name, double purchasePrice, double sellingPrice, Section section, String description, String pitch) {
+    public Timpani(String name, double purchasePrice, double sellingPrice, Section section, String description, Pitch pitch) {
         super(name, purchasePrice, sellingPrice, section, description);
         this.pitch = pitch;
     }
@@ -17,11 +19,11 @@ class Timpani extends Instrument {
         return null;
     }
 
-    public String getPitch() {
+    public Pitch getPitch() {
         return this.pitch;
     }
 
-    public void setPitch(String pitch) {
+    public void setPitch(Pitch pitch) {
         this.pitch = pitch;
     }
 }

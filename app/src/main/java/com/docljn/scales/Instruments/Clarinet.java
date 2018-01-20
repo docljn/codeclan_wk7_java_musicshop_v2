@@ -9,7 +9,7 @@ import com.docljn.scales.Spares.Reeds.ReedType;
  */
 
 class Clarinet extends Instrument{
-    private final ClarinetReed reed;
+    private ClarinetReed reed;
 
     public Clarinet(String name, double purchasePrice, double sellingPrice, Section section, String description) {
         super(name, purchasePrice, sellingPrice, section, description);
@@ -35,4 +35,7 @@ class Clarinet extends Instrument{
     }
 
 
+    public void setReed(ClarinetReed reed) {
+        this.reed = reed;
+    }
 }

@@ -1,7 +1,7 @@
 package com.docljn.scales.Spares.Strings;
 
 import com.docljn.scales.Spares.Spares;
-import com.docljn.scales.Spares.Strings.Pitch;
+import com.docljn.scales.Spares.Pitch;
 
 /**
  * Created by lornanoble on 20/01/2018.
