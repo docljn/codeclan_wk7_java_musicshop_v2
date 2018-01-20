@@ -29,8 +29,13 @@ public class PrintedMusicTest {
     }
 
     @Test
-    public void returnsPurchasPrice(){
+    public void returnsPurchasePrice(){
         assertEquals(5.00, musicBook.getPurchasePrice(), 0.001);
+    }
+
+    @Test
+    public void calculatesMarkup(){
+        assertEquals(7.99, musicBook.calculateMarkup(), 0.001);
     }
 
 }

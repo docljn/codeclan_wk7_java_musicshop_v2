@@ -54,4 +54,6 @@ class Shop {
     public double getMarkup(StockItem stockItem) {
         return stockItem.getSellingPrice() - stockItem.getPurchasePrice();
     }
+
+//    TODO: Remember to CAST if you want to use method specific to any of the subclasses of StockItem
 }
