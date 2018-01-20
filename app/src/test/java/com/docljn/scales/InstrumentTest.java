@@ -19,7 +19,7 @@ public class InstrumentTest {
 
     @Before
     public void before(){
-        horn = new Horn("French Horn", 70.00, 140.00, Section.BRASS);
+        horn = new Horn("French Horn", 70.00, 140.00, Section.BRASS, "Silver");
     }
 
 
@@ -37,5 +37,22 @@ public class InstrumentTest {
     public void canGetPurchasePrice(){
         assertEquals(70, horn.getPurchasePrice(), 0.001);
     }
-    
+
+
+    @Test
+    public void returnsDescription(){
+        assertEquals("Silver", horn.getDescription());
+    }
+
+    @Test
+    public void setsDescription(){
+        horn.setDescription("Matte bronze");
+        assertEquals("Matte bronze", horn.getDescription());
+    }
+
+    @Test
+    public void canBePlayed(){
+        assertEquals("Hoot hoot", horn.play());
+    }
+
 }
