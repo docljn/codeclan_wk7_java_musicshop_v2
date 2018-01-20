@@ -1,5 +1,6 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Reeds.ClarinetReed;
 import com.docljn.scales.Spares.Reeds.ReedNumber;
 import com.docljn.scales.Spares.Reeds.ReedType;
 
@@ -16,9 +17,10 @@ public class ClarinetTest {
 
     Clarinet clarinet;
 
+
     @Before
     public void before() {
-        clarinet = new Clarinet("E Flat Clarinet", 150, 250,  Section.WOODWIND,"Rosewood Inlay", ReedType.E_FLAT, ReedNumber.ONE);
+        clarinet = new Clarinet("E Flat Clarinet", 150, 250,  Section.WOODWIND,"Rosewood Inlay");
     }
 
     @Test
@@ -28,12 +30,12 @@ public class ClarinetTest {
 
     @Test
     public void canGetReedNumber(){
-        assertEquals(ReedNumber.ONE, clarinet.getReedNumber());
+        assertEquals(ReedNumber.TWO, clarinet.getReedNumber());
     }
 
     @Test
     public void reedNumberAffectsPlaying(){
-        assertEquals("Duck-like quacking at 85.0dB" ,clarinet.play());
+        assertEquals("Duck-like quacking at 90.0dB" ,clarinet.play());
     }
 
 

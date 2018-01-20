@@ -1,5 +1,6 @@
 package com.docljn.scales.Instruments;
 
+import com.docljn.scales.Spares.Reeds.ClarinetReed;
 import com.docljn.scales.Spares.Reeds.ReedNumber;
 import com.docljn.scales.Spares.Reeds.ReedType;
 
@@ -8,14 +9,12 @@ import com.docljn.scales.Spares.Reeds.ReedType;
  */
 
 class Clarinet extends Instrument{
-    private ReedType reedType;
-    private ReedNumber reedNumber;
+    private final ClarinetReed reed;
 
-    public Clarinet(String name, double purchasePrice, double sellingPrice, Section section, String description, ReedType reedType, ReedNumber reedNumber) {
+    public Clarinet(String name, double purchasePrice, double sellingPrice, Section section, String description) {
         super(name, purchasePrice, sellingPrice, section, description);
-        this.reedType = reedType;
-        this.reedNumber = reedNumber;
-        this.reedType = reedType;
+        this.reed = new ClarinetReed("Yamaha", 0, 0, ReedType.E_FLAT, ReedNumber.TWO);
+
     }
 
     @Override
@@ -24,11 +23,11 @@ class Clarinet extends Instrument{
     }
 
     public ReedType getReedType() {
-        return this.reedType;
+        return this.reed.getReedType();
     }
 
     public ReedNumber getReedNumber() {
-        return this.reedNumber;
+        return this.reed.getReedNumber();
     }
 
     public double getPlayingVolume(){
