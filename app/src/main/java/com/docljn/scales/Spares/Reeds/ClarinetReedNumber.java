@@ -4,7 +4,7 @@ package com.docljn.scales.Spares.Reeds;
  * Created by lornanoble on 20/01/2018.
  */
 
-public enum ReedNumber {
+public enum ClarinetReedNumber {
     ONE(1),
     ONE_POINT_FIVE(1.5),
     TWO(2),
@@ -17,7 +17,7 @@ public enum ReedNumber {
 
     private double strength;
 
-    ReedNumber(double strength) {
+    ClarinetReedNumber(double strength) {
         this.strength = strength;
     }
 

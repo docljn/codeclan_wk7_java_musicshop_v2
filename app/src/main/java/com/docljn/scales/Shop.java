@@ -55,5 +55,15 @@ class Shop {
         return stockItem.getSellingPrice() - stockItem.getPurchasePrice();
     }
 
+    public double getMaxProfit() {
+        double maxProfit = 0;
+        for (StockItem item: this.stock) {
+            maxProfit += item.getMarkup();
+        }
+        return maxProfit;
+    }
+
 //    TODO: Remember to CAST if you want to use method specific to any of the subclasses of StockItem
+
+//    TODO: Find out how you would search for an item in stock, and then cast to get the actual item?
 }

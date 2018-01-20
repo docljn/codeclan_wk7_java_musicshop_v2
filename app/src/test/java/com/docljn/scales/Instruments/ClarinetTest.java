@@ -1,8 +1,8 @@
 package com.docljn.scales.Instruments;
 
 import com.docljn.scales.Spares.Reeds.ClarinetReed;
-import com.docljn.scales.Spares.Reeds.ReedNumber;
-import com.docljn.scales.Spares.Reeds.ReedType;
+import com.docljn.scales.Spares.Reeds.ClarinetReedNumber;
+import com.docljn.scales.Spares.Reeds.ClarinetReedType;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,12 +25,12 @@ public class ClarinetTest {
 
     @Test
     public void canGetReedType(){
-        assertEquals(ReedType.E_FLAT, clarinet.getReedType());
+        assertEquals(ClarinetReedType.E_FLAT, clarinet.getReedType());
     }
 
     @Test
     public void canGetReedNumber(){
-        assertEquals(ReedNumber.TWO, clarinet.getReedNumber());
+        assertEquals(ClarinetReedNumber.TWO, clarinet.getReedNumber());
     }
 
     @Test
@@ -40,9 +40,9 @@ public class ClarinetTest {
 
     @Test
     public void canChangeReed(){
-        ClarinetReed reed2 = new ClarinetReed("Boosey", 3.00, 5.00, ReedType.E_FLAT, ReedNumber.FIVE);
+        ClarinetReed reed2 = new ClarinetReed("Boosey", 3.00, 5.00, ClarinetReedType.E_FLAT, ClarinetReedNumber.FIVE);
         clarinet.setReed(reed2);
-        assertEquals(ReedNumber.FIVE, clarinet.getReedNumber());
+        assertEquals(ClarinetReedNumber.FIVE, clarinet.getReedNumber());
     }
 
 

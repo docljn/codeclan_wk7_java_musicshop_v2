@@ -67,6 +67,14 @@ public class ShopTest {
         assertEquals(7.99, shop.getMarkup(musicBook), 0.001);
     }
 
+    @Test
+    public void canCalculateTotalPotentialProfit(){
+        shop.buy(musicBook);
+        shop.buy(musicBook);
+        assertEquals(15.98, shop.getMaxProfit(), 0.001);
+
+    }
+
 
 
 

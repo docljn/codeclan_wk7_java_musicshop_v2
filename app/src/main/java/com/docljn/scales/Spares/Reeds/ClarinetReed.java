@@ -7,21 +7,21 @@ import com.docljn.scales.Spares.Spares;
  */
 
 public class ClarinetReed extends Spares {
-    private ReedType reedType;
-    private ReedNumber reedNumber;
+    private ClarinetReedType clarinetReedType;
+    private ClarinetReedNumber clarinetReedNumber;
 
-    public ClarinetReed(String name, double purchasePrice, double sellingPrice, ReedType reedType, ReedNumber reedNumber) {
+    public ClarinetReed(String name, double purchasePrice, double sellingPrice, ClarinetReedType clarinetReedType, ClarinetReedNumber clarinetReedNumber) {
         super(name, purchasePrice, sellingPrice);
-        this.reedType = reedType;
-        this.reedNumber = reedNumber;
+        this.clarinetReedType = clarinetReedType;
+        this.clarinetReedNumber = clarinetReedNumber;
     }
 
-    public ReedType getReedType() {
-        return this.reedType;
+    public ClarinetReedType getClarinetReedType() {
+        return this.clarinetReedType;
     }
 
 
-    public ReedNumber getReedNumber() {
-        return this.reedNumber;
+    public ClarinetReedNumber getClarinetReedNumber() {
+        return this.clarinetReedNumber;
     }
 }

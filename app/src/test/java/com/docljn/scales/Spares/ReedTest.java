@@ -1,8 +1,8 @@
 package com.docljn.scales.Spares;
 
 import com.docljn.scales.Spares.Reeds.ClarinetReed;
-import com.docljn.scales.Spares.Reeds.ReedNumber;
-import com.docljn.scales.Spares.Reeds.ReedType;
+import com.docljn.scales.Spares.Reeds.ClarinetReedNumber;
+import com.docljn.scales.Spares.Reeds.ClarinetReedType;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,16 +19,16 @@ public class ReedTest {
 
     @Before
     public void before(){
-        reedBb = new ClarinetReed("Yamaha", 1.50, 3.50, ReedType.B_FLAT, ReedNumber.FIVE);
+        reedBb = new ClarinetReed("Yamaha", 1.50, 3.50, ClarinetReedType.B_FLAT, ClarinetReedNumber.FIVE);
     }
 
     @Test
     public void returnsType(){
-        assertEquals(ReedType.B_FLAT, reedBb.getReedType());
+        assertEquals(ClarinetReedType.B_FLAT, reedBb.getClarinetReedType());
     }
 
     @Test
     public void returnsNumber(){
-        assertEquals(ReedNumber.FIVE, reedBb.getReedNumber());
+        assertEquals(ClarinetReedNumber.FIVE, reedBb.getClarinetReedNumber());
     }
 }

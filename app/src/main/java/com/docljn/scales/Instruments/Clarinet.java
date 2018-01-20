@@ -1,8 +1,8 @@
 package com.docljn.scales.Instruments;
 
 import com.docljn.scales.Spares.Reeds.ClarinetReed;
-import com.docljn.scales.Spares.Reeds.ReedNumber;
-import com.docljn.scales.Spares.Reeds.ReedType;
+import com.docljn.scales.Spares.Reeds.ClarinetReedNumber;
+import com.docljn.scales.Spares.Reeds.ClarinetReedType;
 
 /**
  * Created by lornanoble on 20/01/2018.
@@ -13,7 +13,7 @@ class Clarinet extends Instrument{
 
     public Clarinet(String name, double purchasePrice, double sellingPrice, Section section, String description) {
         super(name, purchasePrice, sellingPrice, section, description);
-        this.reed = new ClarinetReed("Yamaha", 0, 0, ReedType.E_FLAT, ReedNumber.TWO);
+        this.reed = new ClarinetReed("Yamaha", 0, 0, ClarinetReedType.E_FLAT, ClarinetReedNumber.TWO);
 
     }
 
@@ -22,12 +22,12 @@ class Clarinet extends Instrument{
         return "Duck-like quacking at " + getPlayingVolume()  +"dB";
     }
 
-    public ReedType getReedType() {
-        return this.reed.getReedType();
+    public ClarinetReedType getReedType() {
+        return this.reed.getClarinetReedType();
     }
 
-    public ReedNumber getReedNumber() {
-        return this.reed.getReedNumber();
+    public ClarinetReedNumber getReedNumber() {
+        return this.reed.getClarinetReedNumber();
     }
 
     public double getPlayingVolume(){
