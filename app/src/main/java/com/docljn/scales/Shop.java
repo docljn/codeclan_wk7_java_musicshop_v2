@@ -34,6 +34,7 @@ class Shop {
 
     public void buy(StockItem stockItem) {
 //        TODO: add a source for the money used to buy stock that isn't the cash count!
+//        At the moment, a purchase doesn't affect money anywhere!
         this.stock.add(stockItem);
     }
 
