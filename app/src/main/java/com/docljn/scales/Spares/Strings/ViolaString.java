@@ -1,13 +1,13 @@
 package com.docljn.scales.Spares.Strings;
 
-import com.docljn.scales.Spares.Spares;
 import com.docljn.scales.Spares.Pitch;
+import com.docljn.scales.StockItem;
 
 /**
  * Created by lornanoble on 20/01/2018.
  */
 
-public class ViolaString extends Spares {
+public class ViolaString extends StockItem {
 
     private Pitch pitch;
 

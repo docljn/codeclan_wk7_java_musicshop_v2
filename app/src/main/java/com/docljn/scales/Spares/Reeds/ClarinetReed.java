@@ -1,12 +1,12 @@
 package com.docljn.scales.Spares.Reeds;
 
-import com.docljn.scales.Spares.Spares;
+import com.docljn.scales.StockItem;
 
 /**
  * Created by lornanoble on 20/01/2018.
  */
 
-public class ClarinetReed extends Spares {
+public class ClarinetReed extends StockItem {
     private ClarinetReedType clarinetReedType;
     private ClarinetReedNumber clarinetReedNumber;
 

@@ -1,14 +1,17 @@
 package com.docljn.scales.Spares;
 
+
+import com.docljn.scales.StockItem;
+
 /**
  * Created by lornanoble on 20/01/2018.
  */
 
-public class Seat extends Spares {
+public class Seat extends StockItem {
     private int height;
     private boolean adjustable;
 
-    public Seat(String name, double purchasePrice, double sellingPrice, int heightInCentimeters, boolean adjustable) {
+    public Seat(String name, double purchasePrice, double sellingPrice, int height, boolean adjustable) {
         super(name, purchasePrice, sellingPrice);
         this.height = height;
         this.adjustable = adjustable;
