@@ -1,5 +1,8 @@
 package com.docljn.scales;
 
+import com.docljn.scales.Instruments.Section;
+import com.docljn.scales.PrintedMusicItems.PrintedMusic;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +22,7 @@ public class ShopTest {
     @Before
     public void before() {
         shop = new Shop("Scales");
-        musicBook = new PrintedMusic("Book", 5.00, 12.99);
+        musicBook = new PrintedMusic("Book", 5.00, 12.99, Section.WOODWIND);
     }
 
     @Test
@@ -38,10 +41,6 @@ public class ShopTest {
         assertEquals(1, shop.getStockCount());
     }
 
-    /*
-    PAUSED at this point, as I need to develop the sellable item interface more in order to sell something
-    START with PRINTED MUSIC class as this has very few other features
-     */
     @Test
     public void saleReducesShopStock(){
         shop.buy(musicBook);
@@ -101,6 +100,8 @@ public class ShopTest {
         assertEquals(1007.99, shop.getBankBalance(), 0.001);
         assertEquals(0, shop.getCashCount(), 0.001);
     }
+
+//    TODO: how to generate a stock list for stocktake? It would need to be ordered and numbered?
 
 
 
