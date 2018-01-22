@@ -11,11 +11,15 @@ class Shop {
     private String shopName;
     private ArrayList<StockItem> stock;
     private double cashCount;
+    private double bankBalance;
+
 
     public Shop(String shopName) {
         this.shopName = shopName;
         this.cashCount = 0.00;
         this.stock = new ArrayList<>();
+        this.bankBalance = 0.00;
+
     }
 
     public String getName() {
@@ -31,11 +35,18 @@ class Shop {
     }
 
 
+    public double getBankBalance() {
+        return this.bankBalance;
+    }
+
+
 
     public void buy(StockItem stockItem) {
-//        TODO: add a source for the money used to buy stock that isn't the cash count!
-//        At the moment, a purchase doesn't affect money anywhere!
-        this.stock.add(stockItem);
+        if(this.bankBalance >= stockItem.getPurchasePrice()){
+            this.bankBalance -= stockItem.getPurchasePrice();
+            this.stock.add(stockItem);
+        }
+
     }
 
     public void sell(StockItem stockItem) {
@@ -63,6 +74,17 @@ class Shop {
         }
         return maxProfit;
     }
+
+
+    public void invest(double investmentAmount) {
+        this.bankBalance += investmentAmount;
+    }
+
+    public void depositCash() {
+        this.bankBalance += getCashCount();
+        this.cashCount = 0.00;
+    }
+
 
 //    TODO: Remember to CAST if you want to use method specific to any of the subclasses of StockItem
 

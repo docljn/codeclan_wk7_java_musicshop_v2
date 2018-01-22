@@ -1,6 +1,13 @@
 package com.docljn.scales;
 
 import org.junit.Before;
+import org.junit.Test;<<<<<<< HEAD
+=======
+import com.docljn.scales.Instruments.Section;
+import com.docljn.scales.PrintedMusicItems.PrintedMusic;
+
+>>>>>>> fromV1
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -15,7 +22,8 @@ public class PrintedMusicTest {
 
     @Before
     public void before(){
-        musicBook = new PrintedMusic("Book", 5.00, 12.99);
+
+        musicBook = new PrintedMusic("Book", 5.00, 12.99, Section.KEYBOARD);
     }
 
     @Test
@@ -56,6 +64,11 @@ public class PrintedMusicTest {
     @Test
     public void calculatesMarkup(){
         assertEquals(7.99, musicBook.getMarkup(), 0.001);
+    }
+
+    @Test
+    public void returnsLinkedSection(){
+        assertEquals(Section.KEYBOARD, musicBook.getSection());
     }
 
 }

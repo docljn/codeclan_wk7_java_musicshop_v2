@@ -2,7 +2,8 @@ package com.docljn.scales;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import com.docljn.scales.Instruments.Section;
+import com.docljn.scales.PrintedMusicItems.PrintedMusic;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -19,7 +20,7 @@ public class ShopTest {
     @Before
     public void before() {
         shop = new Shop("Scales");
-        musicBook = new PrintedMusic("Book", 5.00, 12.99);
+        musicBook = new PrintedMusic("Book", 5.00, 12.99, Section.WOODWIND);
     }
 
     @Test
@@ -38,10 +39,6 @@ public class ShopTest {
         assertEquals(1, shop.getStockCount());
     }
 
-    /*
-    PAUSED at this point, as I need to develop the sellable item interface more in order to sell something
-    START with PRINTED MUSIC class as this has very few other features
-     */
     @Test
     public void saleReducesShopStock(){
         shop.buy(musicBook);
@@ -72,8 +69,37 @@ public class ShopTest {
         shop.buy(musicBook);
         shop.buy(musicBook);
         assertEquals(15.98, shop.getMaxProfit(), 0.001);
-
     }
+
+    @Test
+    public void startsWithZeroBankBalance(){
+        assertEquals(0.00, shop.getBankBalance(), 0.001);
+    }
+
+    @Test
+    public void investingIncreasesBankBalance(){
+        shop.invest(1000.00);
+        assertEquals(1000.00, shop.getBankBalance(), 0.001);
+    }
+
+    @Test
+    public void buyingStockDecreasesBankBalance(){
+        shop.invest(1000);
+        shop.buy(musicBook);
+        assertEquals(995, shop.getBankBalance(), 0.001);
+    }
+
+    @Test
+    public void depositingCashClearsCashCountIncreasesBankBalance(){
+        shop.invest(1000);
+        shop.buy(musicBook);
+        shop.sell(musicBook);
+        shop.depositCash();
+        assertEquals(1007.99, shop.getBankBalance(), 0.001);
+        assertEquals(0, shop.getCashCount(), 0.001);
+    }
+
+//    TODO: how to generate a stock list for stocktake? It would need to be ordered and numbered?
 
 
 

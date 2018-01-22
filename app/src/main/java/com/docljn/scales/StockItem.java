@@ -1,6 +1,8 @@
 package com.docljn.scales;
 
+import com.docljn.scales.Instruments.Section;<<<<<<< HEAD
 import com.docljn.scales.Instruments.Section;
+
 
 /**
  * Created by lornanoble on 20/01/2018.
@@ -24,6 +26,7 @@ public class StockItem {
 
     public String getBrand() {
         return this.brand;
+
     }
 
     public double getSellingPrice() {
@@ -59,5 +62,7 @@ public class StockItem {
     public void setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
+
+
 
 }

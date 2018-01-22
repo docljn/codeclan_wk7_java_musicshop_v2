@@ -1,7 +1,10 @@
 package com.docljn.scales.Instruments;
 
 
+<<<<<<< HEAD
 import com.docljn.scales.Playable;
+=======
+>>>>>>> fromV1
 import com.docljn.scales.StockItem;
 
 /**
