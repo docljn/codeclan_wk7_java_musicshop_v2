@@ -1,5 +1,6 @@
 package com.docljn.scales.Spares;
 
+import com.docljn.scales.Instruments.Section;
 import com.docljn.scales.Spares.Strings.ViolaString;
 
 import org.junit.Before;
@@ -17,7 +18,7 @@ public class StringTest {
 
     @Before
     public void before() {
-        string = new ViolaString("Viola A String", 0.50, 1.99, Pitch.A );
+        string = new ViolaString("CatGut", 0.50, 1.99, Section.SUNDRIES, "Viola A String", Pitch.A );
     }
 
     @Test

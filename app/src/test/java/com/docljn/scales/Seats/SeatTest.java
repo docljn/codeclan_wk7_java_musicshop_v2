@@ -1,5 +1,6 @@
 package com.docljn.scales.Seats;
 
+import com.docljn.scales.Instruments.Section;
 import com.docljn.scales.Spares.Seat;
 
 import org.junit.Before;
@@ -17,7 +18,7 @@ public class SeatTest {
 
     @Before
     public void before(){
-        pianoStool = new Seat("Bechstein", 75, 150, 50, true);
+        pianoStool = new Seat("Bechstein", 75, 150, Section.SUNDRIES, "Pine piano stool with black PVC padded seat", 50, true);
     }
 
     @Test

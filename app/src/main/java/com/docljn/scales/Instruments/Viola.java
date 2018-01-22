@@ -16,10 +16,10 @@ class Viola extends Instrument {
     public Viola(String name, double purchasePrice, double sellingPrice, Section section, String description) {
         super(name, purchasePrice, sellingPrice, section, description);
         this.strings = new ArrayList<ViolaString>();
-        strings.add(new ViolaString(name, 0, 0, Pitch.C));
-        strings.add(new ViolaString(name, 0, 0, Pitch.G));
-        strings.add(new ViolaString(name, 0, 0, Pitch.D));
-        strings.add(new ViolaString(name, 0, 0, Pitch.A));
+        strings.add(new ViolaString("FancyStringMaker", 0, 0, Section.STRINGS, "Real gut string", Pitch.C));
+        strings.add(new ViolaString("FancyStringMaker", 0, 0, Section.STRINGS, "Real gut string", Pitch.G));
+        strings.add(new ViolaString("FancyStringMaker", 0, 0, Section.STRINGS, "Real gut string", Pitch.D));
+        strings.add(new ViolaString("FancyStringMaker", 0, 0, Section.STRINGS, "Real gut string", Pitch.A));
     }
 
     @Override

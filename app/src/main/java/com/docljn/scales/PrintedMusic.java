@@ -1,6 +1,5 @@
 package com.docljn.scales;
 
-import com.docljn.scales.Instruments.Instrument;
 import com.docljn.scales.Instruments.Section;
 
 /**
@@ -9,13 +8,9 @@ import com.docljn.scales.Instruments.Section;
 
 public class PrintedMusic extends StockItem {
 
-    public  Section section;
-    public  Instrument instrument;
 
-    public PrintedMusic(String name, double purchasePrice, double sellingPrice) {// Section section, Instrument instrument) {
-        super(name, purchasePrice, sellingPrice);
-        //this.section = section;
-        //this.instrument = instrument;
+    public PrintedMusic(String name, double purchasePrice, double sellingPrice, Section section, String description) {
+        super(name, purchasePrice, sellingPrice, section, description);
     }
 
 

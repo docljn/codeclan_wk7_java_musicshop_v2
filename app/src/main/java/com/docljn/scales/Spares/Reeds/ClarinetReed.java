@@ -1,25 +1,19 @@
 package com.docljn.scales.Spares.Reeds;
-
-<<<<<<< HEAD
-import com.docljn.scales.Spares.Spares;
-=======
+import com.docljn.scales.Instruments.Section;
 import com.docljn.scales.StockItem;
->>>>>>> fromV1
+
 
 /**
  * Created by lornanoble on 20/01/2018.
  */
 
-<<<<<<< HEAD
-public class ClarinetReed extends Spares {
-=======
+
 public class ClarinetReed extends StockItem {
->>>>>>> fromV1
     private ClarinetReedType clarinetReedType;
     private ClarinetReedNumber clarinetReedNumber;
 
-    public ClarinetReed(String name, double purchasePrice, double sellingPrice, ClarinetReedType clarinetReedType, ClarinetReedNumber clarinetReedNumber) {
-        super(name, purchasePrice, sellingPrice);
+    public ClarinetReed(String brand, double purchasePrice, double sellingPrice, Section section, String description, ClarinetReedType clarinetReedType, ClarinetReedNumber clarinetReedNumber) {
+        super(brand, purchasePrice, sellingPrice, section, description);
         this.clarinetReedType = clarinetReedType;
         this.clarinetReedNumber = clarinetReedNumber;
     }

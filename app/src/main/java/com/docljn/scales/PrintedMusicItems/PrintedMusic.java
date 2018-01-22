@@ -9,15 +9,8 @@ import com.docljn.scales.StockItem;
 
 public class PrintedMusic extends StockItem {
 
-    public  Section section;
 
-    public PrintedMusic(String name, double purchasePrice, double sellingPrice, Section section) {
-        super(name, purchasePrice, sellingPrice);
-        this.section = section;
-    }
-
-
-    public Section getSection() {
-        return this.section;
+    public PrintedMusic(String brand, double purchasePrice, double sellingPrice, Section section, String description) {
+        super(brand, purchasePrice, sellingPrice, section, description);
     }
 }

@@ -11,10 +11,7 @@ public enum Section {
     PERCUSSION,
     STRINGS,
     WOODWIND,
-<<<<<<< HEAD
     SHEET_MUSIC,
     SUNDRIES
-=======
->>>>>>> fromV1
 
 }

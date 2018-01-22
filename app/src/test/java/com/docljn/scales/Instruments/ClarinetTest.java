@@ -40,7 +40,7 @@ public class ClarinetTest {
 
     @Test
     public void canChangeReed(){
-        ClarinetReed reed2 = new ClarinetReed("Boosey", 3.00, 5.00, ClarinetReedType.E_FLAT, ClarinetReedNumber.FIVE);
+        ClarinetReed reed2 = new ClarinetReed("Boosey", 3.00, 5.00, Section.WOODWIND, "Standard clarinet reed", ClarinetReedType.E_FLAT, ClarinetReedNumber.FIVE);
         clarinet.setReed(reed2);
         assertEquals(ClarinetReedNumber.FIVE, clarinet.getReedNumber());
     }

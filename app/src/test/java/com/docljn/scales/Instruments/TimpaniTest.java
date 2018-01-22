@@ -17,7 +17,7 @@ public class TimpaniTest {
 
     @Before
     public void before(){
-        timpano = new Timpani("Kettle Drum", 3000, 5000, Section.PERCUSSION, "Brass with calfskin drumhead", Pitch.G);
+        timpano = new Timpani("Kettle Drum", 3000, 5000, Section.PERCUSSION, "Brass with calfskin drumhead", Pitch.C);
     }
 
     @Test

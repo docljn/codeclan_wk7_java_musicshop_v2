@@ -20,7 +20,7 @@ public class ShopTest {
     @Before
     public void before() {
         shop = new Shop("Scales");
-        musicBook = new PrintedMusic("Book", 5.00, 12.99, Section.WOODWIND);
+        musicBook = new PrintedMusic("Book", 5.00, 12.99, Section.SUNDRIES, "Keyboard studies");
     }
 
     @Test
@@ -35,12 +35,14 @@ public class ShopTest {
 
     @Test
     public void canAddStock(){
+        shop.invest(100.00);
         shop.buy(musicBook);
         assertEquals(1, shop.getStockCount());
     }
 
     @Test
     public void saleReducesShopStock(){
+        shop.invest(100.00);
         shop.buy(musicBook);
         shop.sell(musicBook);
         assertEquals(0, shop.getStockCount());
@@ -48,6 +50,7 @@ public class ShopTest {
 
     @Test
     public void saleIncreasesShopCashByPrice(){
+        shop.invest(100.00);
         shop.buy(musicBook);
         shop.sell(musicBook);
         assertEquals(12.99, shop.getCashCount(), 0.001);
@@ -66,6 +69,7 @@ public class ShopTest {
 
     @Test
     public void canCalculateTotalPotentialProfit(){
+        shop.invest(100.00);
         shop.buy(musicBook);
         shop.buy(musicBook);
         assertEquals(15.98, shop.getMaxProfit(), 0.001);

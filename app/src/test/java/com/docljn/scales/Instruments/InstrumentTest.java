@@ -25,7 +25,7 @@ public class InstrumentTest {
 
     @Test
     public void canGetName(){
-        assertEquals("French Horn", horn.getName());
+        assertEquals("French Horn", horn.getBrand());
     }
 
     @Test

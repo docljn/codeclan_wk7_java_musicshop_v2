@@ -1,6 +1,5 @@
 package com.docljn.scales;
 
-import com.docljn.scales.Instruments.Section;<<<<<<< HEAD
 import com.docljn.scales.Instruments.Section;
 
 
@@ -61,6 +60,10 @@ public class StockItem {
 
     public void setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 

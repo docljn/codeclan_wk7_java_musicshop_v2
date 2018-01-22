@@ -1,5 +1,6 @@
 package com.docljn.scales.Spares;
 
+import com.docljn.scales.Instruments.Section;
 import com.docljn.scales.Spares.Reeds.ClarinetReed;
 import com.docljn.scales.Spares.Reeds.ClarinetReedNumber;
 import com.docljn.scales.Spares.Reeds.ClarinetReedType;
@@ -19,7 +20,7 @@ public class ReedTest {
 
     @Before
     public void before(){
-        reedBb = new ClarinetReed("Yamaha", 1.50, 3.50, ClarinetReedType.B_FLAT, ClarinetReedNumber.FIVE);
+        reedBb = new ClarinetReed("Yamaha", 1.50, 3.50, Section.SUNDRIES, "Standard clarinet reed", ClarinetReedType.B_FLAT, ClarinetReedNumber.FIVE);
     }
 
     @Test

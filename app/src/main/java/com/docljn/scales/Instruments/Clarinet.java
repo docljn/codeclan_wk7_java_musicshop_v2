@@ -11,9 +11,9 @@ import com.docljn.scales.Spares.Reeds.ClarinetReedType;
 class Clarinet extends Instrument{
     private ClarinetReed reed;
 
-    public Clarinet(String name, double purchasePrice, double sellingPrice, Section section, String description) {
-        super(name, purchasePrice, sellingPrice, section, description);
-        this.reed = new ClarinetReed("Yamaha", 0, 0, ClarinetReedType.E_FLAT, ClarinetReedNumber.TWO);
+    public Clarinet(String brand, double purchasePrice, double sellingPrice, Section section, String description) {
+        super(brand, purchasePrice, sellingPrice, section, description);
+        this.reed = new ClarinetReed("Yamaha", 0, 0, Section.WOODWIND, "Standard clarinet reed", ClarinetReedType.E_FLAT, ClarinetReedNumber.TWO);
 
     }
 
